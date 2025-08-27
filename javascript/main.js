@@ -31,7 +31,7 @@ function() {
         });
     });
 
-    
+
 // Add event listeners to call buttons
     callButtons.forEach((button, index) => {
         button.addEventListener('click', function() {
@@ -66,6 +66,27 @@ function() {
         });
     });
 
+    
+// Add event listeners to copy buttons
+    copyButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const card = this.closest('.card');
+            const serviceNumber = card.querySelector('.card-number').textContent;
+            
+            // Copy to clipboard (simulated)
+            navigator.clipboard.writeText(serviceNumber).then(() => {
+                // Increase copy count
+                copyCount++;
+                updateUI();
+                
+                // Show alert
+                alert(`Copied ${serviceNumber} to clipboard`);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert('Failed to copy number');
+            });
+        });
+    });
 
 
 
