@@ -104,7 +104,37 @@ function() {
         // Update call history
         updateCallHistory();
     }
-
+// Function to update call history list
+    function updateCallHistory() {
+        // Clear current history
+        historyList.innerHTML = '';
+        
+        // Add history items
+        callHistory.forEach(item => {
+            const li = document.createElement('li');
+            li.className = 'history-item';
+            
+            li.innerHTML = `
+                <div class="history-info">
+                    <span class="history-name">${item.name}</span>
+                    <span class="history-number">${item.number}</span>
+                </div>
+                <span class="history-time">${item.time}</span>
+            `;
+            
+            historyList.appendChild(li);
+        });
+        
+        // Show message if history is empty
+        if (callHistory.length === 0) {
+            const emptyMessage = document.createElement('li');
+            emptyMessage.className = 'history-item';
+            emptyMessage.textContent = 'No call history yet';
+            emptyMessage.style.color = '#999';
+            emptyMessage.style.textAlign = 'center';
+            historyList.appendChild(emptyMessage);
+        }
+    }
 
 
 });
