@@ -30,4 +30,43 @@ function() {
             updateUI();
         });
     });
+
+    
+// Add event listeners to call buttons
+    callButtons.forEach((button, index) => {
+        button.addEventListener('click', function() {
+            const card = this.closest('.card');
+            const serviceName = card.querySelector('.card-title-bangla').textContent;
+            const serviceNumber = card.querySelector('.card-number').textContent;
+            
+            // Check if user has enough coins
+            if (coinsCount < 20) {
+                alert(`You don't have enough coins to call ${serviceName}. You need 20 coins but you only have ${coinsCount}.`);
+                return;
+            }
+            
+            // Deduct coins
+            coinsCount -= 20;
+            
+            // Add to call history
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            
+            callHistory.unshift({
+                name: serviceName,
+                number: serviceNumber,
+                time: timeString
+            });
+            
+            // Update UI
+            updateUI();
+            
+            // Show alert
+            alert(`Calling ${serviceName} at ${serviceNumber}`);
+        });
+    });
+
+
+
+
 });
