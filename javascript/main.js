@@ -66,7 +66,7 @@ function() {
         });
     });
 
-    
+
 // Add event listeners to copy buttons
     copyButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -88,6 +88,10 @@ function() {
         });
     });
 
-
+// Clear history button
+    clearHistoryBtn.addEventListener('click', function() {
+        callHistory = [];
+        updateUI();
+    });
 
 });
