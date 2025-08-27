@@ -94,4 +94,17 @@ function() {
         updateUI();
     });
 
+// Function to update UI elements
+    function updateUI() {
+        // Update counts in header
+        likesElement.textContent = likesCount;
+        starsElement.textContent = coinsCount;
+        copyCountElement.textContent = `${copyCount} Copy`;
+        
+        // Update call history
+        updateCallHistory();
+    }
+
+
+
 });
