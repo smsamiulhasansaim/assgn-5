@@ -19,4 +19,7 @@ function() {
     const copyButtons = document.querySelectorAll('.copy-btn');
     const clearHistoryBtn = document.querySelector('.clear-btn');
     const historyList = document.querySelector('.history-list');
+
+// Update UI with initial values
+    updateUI();
 });
