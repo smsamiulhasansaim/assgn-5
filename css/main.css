@@ -398,3 +398,52 @@ body {
     font-size: 12px;
     color: #999;
 }
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .header-buttons {
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+    
+    .card-actions {
+        flex-direction: column;
+    }
+    
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 15px;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .header-button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    .logo-container span {
+        font-size: 18px;
+    }
+}
