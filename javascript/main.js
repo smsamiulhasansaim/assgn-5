@@ -22,4 +22,12 @@ function() {
 
 // Update UI with initial values
     updateUI();
+
+// Add event listeners to favorite icons
+    favoriteIcons.forEach(icon => {
+        icon.addEventListener('click', function() {
+            likesCount++;
+            updateUI();
+        });
+    });
 });
