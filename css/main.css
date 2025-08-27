@@ -116,3 +116,47 @@ body {
     margin-top: 10px;
     font-size: 20px;
 }
+
+/* Main Content Layout */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+    .content-wrapper {
+        flex-direction: row;
+    }
+    
+    /* Mobile-history-container*/
+    .history-container {
+        order: 2;
+        width: 300px;
+        top: 90px;
+        height: auto;
+    }
+    
+    .main-container {
+        order: 1;
+        flex: 1;
+    }
+}
+
+/* On mobile */
+@media (max-width: 991px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .history-container {
+        order: 1;
+    }
+    
+    .main-container {
+        order: 2;
+    }
+}
