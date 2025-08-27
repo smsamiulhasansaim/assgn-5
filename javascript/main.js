@@ -10,5 +10,13 @@ function() {
     let copyCount = 0;
     let callHistory = [];
 
-
+    // DOM Elements
+    const likesElement = document.querySelector('.likes span');
+    const starsElement = document.querySelector('.stars span');
+    const copyCountElement = document.querySelector('.copy-button span');
+    const favoriteIcons = document.querySelectorAll('.favorite-icon');
+    const callButtons = document.querySelectorAll('.call-btn');
+    const copyButtons = document.querySelectorAll('.copy-btn');
+    const clearHistoryBtn = document.querySelector('.clear-btn');
+    const historyList = document.querySelector('.history-list');
 });
