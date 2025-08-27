@@ -91,3 +91,28 @@ body {
     object-fit: contain;
     cursor: pointer;
 }
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(90deg, #013223 0%, #006747 50%, #013223 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.main-logo {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-family: 'Tiro Bangla', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-size: 20px;
+}
